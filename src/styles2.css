@@ -1,0 +1,245 @@
+/* styles2.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+    color: #3498db;
+    margin-top: 20px;
+}
+p {
+    padding: 1px;
+}
+.logout-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.customer-details {
+    display: flex;
+    margin-top: 20px;
+}
+
+.customer-image {
+    flex: 1;
+}
+
+.customer-image img {
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 50%; /* Apply a circular border-radius for a nicer look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.customer-info {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.customer-info p {
+    margin: 0;
+}
+
+.orders-table {
+    margin-top: 20px;
+    max-height: 300px; /* Set the maximum height as needed */
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    max-width: 250px; /* Set the maximum width for each cell as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.th-truncated,
+.td-truncated {
+    max-width: 150px; /* Set the maximum width for each cell as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.td-truncated-expanded {
+    white-space: normal;
+    max-width: none;
+    overflow: visible;
+    text-overflow: unset;
+    cursor: auto;
+}
+th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.fixed-header-container {
+    overflow-x: auto;
+    position: relative; /* Add this line */
+    z-index: 0; /* Add this line */
+}
+
+.fixed-header-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.fixed-header-th {
+    position: sticky;
+    top: 0;
+    background-color: #3498db;
+    color: #fff;
+    z-index: 1;
+}
+/* Make the table scrollable on smaller screens */
+@media (max-width: 600px) {
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    th, td {
+        white-space: nowrap;
+    }
+}
+/* Add styles for the notification button and container */
+.notification-btn-container {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.notification-btn {
+    padding: 10px 15px;
+    background-color: #58b8f8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.notifications {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.notification {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    max-width: 280px;
+    width: 100%;
+    max-height: 600px;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #3498db;
+}
+
+/* Notification styles */
+.all-notifications ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.all-notifications li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Voucher notification styles */
+.all-notifications .voucher-notifications li {
+    background-color: #e1f7d5; /* Light green background */
+}
+
+/* Credits notification styles */
+.all-notifications .paycredits-notifications li {
+    background-color: #f7d5d5; /* Light red background */
+}
+/* Style for customer barcode */
+.customer-barcode {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* Light gray background */
+    border: 2px solid #3498db;
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    height: auto;
+}
+
+
+
